@@ -3,7 +3,7 @@ import os
 import shutil
 from typing import Dict, List
 
-from Class.Company2 import PaySlipAsolute
+from Class.Company2 import PaySlipCompany2
 from Helper import PdfHelper
 from Helper.DatabaseHelper import DatabaseHelper
 from Helper.EmailHelper import EmailHelper
@@ -18,7 +18,7 @@ class Program:
         self.email_pass = email_pass
 
     async def run_async(self):
-        working_folder = r""
+        working_folder = r"C:\Users\pc\Desktop\Dev playground\SAMPLE\PDF\Asolute Pay Slip\Payslip202405.pdf"
         history_folder = r""
         fault_folder = r""
         pdf_text = extract_text_from_pdf(working_folder)
@@ -100,11 +100,8 @@ class Program:
     def get_PaySlip_format(self, file_name: str, pdf_text: str, lines: List[str]) -> BasePaySlipFormat:
         for line in lines:
             if "Payslip" in line:
-                return PaySlipAsolute(file_name, pdf_text)
-            elif "Plexus" in line:
-                return POPlexus(file_name, pdf_text)
-            # elif "Ichor" in line:
-                # return POIchor(file_name, pdf_text)
+                return PaySlipCompany2(file_name, pdf_text)
+
         return None
 
 

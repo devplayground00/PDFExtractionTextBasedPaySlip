@@ -2,7 +2,7 @@ import re
 from datetime import datetime
 from Class.baseClass import BasePaySlipFormat
 
-class PaySlipAsolute(BasePaySlipFormat):
+class PaySlipCompany2(BasePaySlipFormat):
     def  __init__(self,file_path: str, raw_text_lines: str):
         super().__init__(file_path,raw_text_lines)
 
