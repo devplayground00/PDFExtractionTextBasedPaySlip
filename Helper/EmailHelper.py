@@ -62,7 +62,7 @@ class EmailHelper:
             mail.logout()
 
         except Exception as e:
-            print(f"❌ Error reading emails: {e}")
+            print(f"Error reading emails: {e}")
 
         return email_details
 
@@ -115,7 +115,7 @@ class EmailHelper:
 
             mail.logout()
         except Exception as e:
-            print(f"❌ Error downloading attachments: {e}")
+            print(f"Error downloading attachments: {e}")
 
         return files_with_senders
 
@@ -164,8 +164,6 @@ class EmailHelper:
             # Logout
             mail.logout()
 
-            # print(f"✅ Email ID {email_id.decode()} deleted successfully.")
-
         except Exception as e:
-            print(f"❌ Error deleting email {email_id.decode()}: {e}")
+            print(f"Error deleting email {email_id.decode()}: {e}")
 
