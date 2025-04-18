@@ -18,7 +18,7 @@ class Program:
         self.email_pass = email_pass
 
     async def run_async(self):
-        working_folder = r"C:\Users\pc\Desktop\Dev playground\SAMPLE\PDF\Asolute Pay Slip\Payslip202405.pdf"
+        working_folder = r""
         history_folder = r""
         fault_folder = r""
         pdf_text = extract_text_from_pdf(working_folder)
