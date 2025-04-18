@@ -9,7 +9,7 @@ from Helper.DatabaseHelper import DatabaseHelper
 from Helper.EmailHelper import EmailHelper
 from Helper.PdfHelper import extract_text_from_pdf
 from Class.baseClass import BasePaySlipFormat
-# from Class.POPlexus import POPlexus
+
 
 class Program:
 
