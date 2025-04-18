@@ -3,7 +3,7 @@ import os
 import shutil
 from typing import Dict, List
 
-from Class.PaySlipAsolute import PaySlipAsolute
+from Class.Company2 import PaySlipAsolute
 from Helper import PdfHelper
 from Helper.DatabaseHelper import DatabaseHelper
 from Helper.EmailHelper import EmailHelper
@@ -20,7 +20,7 @@ class Program:
     async def run_async(self):
         working_folder = r""
         history_folder = r""
-        # fault_folder = r""
+        fault_folder = r""
         pdf_text = extract_text_from_pdf(working_folder)
         if pdf_text:
             await self.process_text(working_folder, working_folder, history_folder)
