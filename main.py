@@ -20,6 +20,7 @@ class Program:
     async def run_async(self):
         working_folder = r"test2"
         history_folder = r""
+        fault_folder = r""
         pdf_text = extract_text_from_pdf(working_folder)
         if pdf_text:
             await self.process_text(working_folder, working_folder, history_folder)
