@@ -18,7 +18,7 @@ class Program:
         self.email_pass = email_pass
 
     async def run_async(self):
-        working_folder = r""
+        working_folder = r"test"
         history_folder = r""
         pdf_text = extract_text_from_pdf(working_folder)
         if pdf_text:
